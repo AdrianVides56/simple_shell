@@ -13,5 +13,5 @@
 #include <sys/wait.h>
 
 char *_strcat(char *dest, char *src);
-
+char **_strtok(char *line);
 #endif
