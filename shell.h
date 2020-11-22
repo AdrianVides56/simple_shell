@@ -14,4 +14,7 @@
 
 char *_strcat(char *dest, char *src);
 char **_strtok(char *line);
+size_t _strlen(char *str);
+void errors(int errornum);
+
 #endif

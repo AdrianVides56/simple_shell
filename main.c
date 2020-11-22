@@ -20,29 +20,29 @@ int main(int argc, char **argv, char **envp)
 		i = 0;
 		reset = 0;
 		if (isatty(STDOUT_FILENO) == 1)
-		        printf(GREEN_T "%s" RESET_COLOR, prompt);
+			printf(GREEN_T "%s" RESET_COLOR, prompt);
 		getln = getline(&line, &bufsize, stdin);
 		if (getln == EOF)
-		  errors(0);
+			errors(0);
 		token = strtok(line, DELIM);
 		while (token != NULL)
-		  {
-		    token2[i] = token;
-		    token = strtok(NULL, DELIM);
-		    i++;
-		  }
- 		child_pid = fork();
+		{
+			token2[i] = token;
+			token = strtok(NULL, DELIM);
+			i++;
+		}
+		child_pid = fork();
 		if (child_pid == -1)
 			errors(-1);
 		if (child_pid == 0)
 		{
-		  if (execve(_strcat(path, token2[0]), token2, NULL) == -1)
-		          errors(127);
-		  exit(0);
+			if (execve(_strcat(path, token2[0]), token2, NULL) == -1)
+				errors(127);
+			exit(0);
 		}
 		else
 			child_pid = wait(NULL);
-		for (;reset <= i; reset ++)
+		for (; reset <= i; reset++)
 			token2[reset] = NULL;
 	}
 	return (0);

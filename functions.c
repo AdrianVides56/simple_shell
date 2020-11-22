@@ -11,12 +11,12 @@ char *_strcat(char *dest, char *src)
 	int a, b;
 
 	for (a = 0; dest[a] != '\0'; a++)
-	;
+		;
 	for (b = 0; src[b] != '\0'; b++)
 	{
-	dest[a] = src[b];
-	a++;
-        }
+		dest[a] = src[b];
+		a++;
+	}
 	dest[a] = '\0';
 	return (dest);
 }
@@ -26,12 +26,11 @@ char *_strcat(char *dest, char *src)
  * @str: string
  * Return: length of th string
  */
-
-int _strlen(char *str)
+size_t _strlen(char *str)
 {
-  int len = 0;
+	size_t len = 0;
 
-  for (len = 0; str[len] != '\0'; len++)
-    ;
-  return (len);
+	for (len = 0; str[len] != '\0'; len++)
+		;
+	return (len);
 }
