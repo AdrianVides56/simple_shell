@@ -1,16 +1,42 @@
-## General
+# Simple_shell
 
-#### Who designed and implemented the original Unix operating system
-#### Who wrote the first version of the UNIX shell
-#### Who invented the B programming language (the direct predecessor to the C programming language)
-#### Who is Ken Thompson
-#### How does a shell work
-#### What is a pid and a ppid
-#### How to manipulate the environment of the current process
-#### What is the difference between a function and a system call
-#### How to create processes
-#### What are the three prototypes of main
-#### How does the shell use the PATH to find the programs
-#### How to execute another program with the execve system call
-#### How to suspend the execution of a process until one of its children terminates
-#### What is EOF / “end-of-file”?
+###### In this repository you will find our own version of a shell written in C; it was created for learning purposes at Holberton School.
+
+
+### Installation!
+```
+  $ git clone https://github.com/AdrianVides56/simple_shell.git
+  $ cd simple_shell
+  $ gcc *.c -o rash
+  $ ./rash
+  ```
+---
+### Files
+- [README.md] :
+    - Readme file for simple_shell project.
+- [main.c] :
+    - Entry point for the program.
+- [functions.c] :
+    - Functions used in the program.
+- functions2.c
+- [shell.h] :
+    - Header file containing libraries, prototypes and macros.
+- [errors.c] :
+    - File to handle errors.
+--- 
+### List of useful commands
+- ls - list files int the current working diectory
+- pwd - displays the path of the current working directory
+- cat - displays the content of a file (cat file_name)
+---
+### Authors
+- Roberth Rondon
+- Adrian Vides
+
+
+
+   [README.md]: <https://github.com/AdrianVides56/simple_shell/blob/master/README.md>
+   [main.c]: <https://github.com/AdrianVides56/simple_shell/blob/master/main.c>
+   [functions.c]: <https://github.com/AdrianVides56/simple_shell/blob/master/functions.c>
+   [shell.h]: <https://github.com/AdrianVides56/simple_shell/blob/master/shell.h>
+   [errors.c]: <https://github.com/AdrianVides56/simple_shell/blob/master/errors.c>
