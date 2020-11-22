@@ -1,6 +1,6 @@
 # Simple_shell
 
-###### In this repository you will find our own version of a shell written in C; it was created for learning purposes at Holberton School.
+#### In this repository you will find our own version of a shell written in C; it was created for learning purposes at Holberton School.
 
 
 ### Installation!
