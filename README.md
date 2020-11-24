@@ -2,6 +2,10 @@
 
 #### In this repository you will find our own version of a shell written in C; it was created for learning purposes at Holberton School.
 
+### Description.
+
+##### The shell is command interpreter in and operating system such as Unix or GNU/Linux, it is a program that excutes other prorgrams.
+
 
 ### Installation!
 ```
