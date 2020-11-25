@@ -4,13 +4,17 @@
 .B RA_Shell
 - RA_Shell it is a little command line interpreter that reads a users input and excute commands.
 .SH SYNOPSIS
-RA_Shell
+.  ./rash
 .SH DESCRIPTION
 RA_Shell it is a simple UNIX command interpreter to Holberton School project. It function is read a command line string on the standar
 input and execute. 
 .SH OPTIONS
 .B If there are no operands RA_shell shall read commands from the standard input. there are no operands and the shell's standard input and standard error are attached to a terminal, 
-.the RA_shell is considered  interactive and not interactive.
+.the RA_shell is considered  interactive and not interactive. The no interactive mode a command can be entered and then piped into
+./rash
+. example:
+
+.echo "/bin/ls" | ./rash
 
 .SH OPERANDS
 Operands don't shall be supported by RA_shell
