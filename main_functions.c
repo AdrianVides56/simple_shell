@@ -13,7 +13,7 @@ char *_getline(size_t val_issaty)
 
         if (val_issaty == 1)
         {
-                write(STDOUT_FILENO, "\033[1;32mRASH@SHELL$", 19);
+                write(STDOUT_FILENO, "\033[1;32mRASH@SHELL$ ", 19);
                 write(STDOUT_FILENO, "\033[0m]", 4);
         }
 
