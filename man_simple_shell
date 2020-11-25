@@ -1,0 +1,26 @@
+.\" manpage for AR_Shell. Simple shell project to Holberton School.
+.TH AR_Shell 0 "21 November 2020" "0.1" "mini shell man page"
+.SH NAME
+.B RA_Shell
+- RA_Shell it is a little command line interpreter that reads a users input and excute commands.
+.SH SYNOPSIS
+RA_Shell
+.SH DESCRIPTION
+AR_Shell it is a simple UNIX command interpreter to Holberton School project. It function is read a command line string on the standar
+input and execute. 
+.SH OPTIONS
+.B If there are no operands rashell shall read commands from the standard input. there are no operands and the shell's standard input and standard error are attached to a terminal, the shell is considered  interactive.
+
+.SH OPERANDS
+Operands don't shall be supported by k_shell
+
+.SH INPUT FILES
+Input files not supported
+
+.SH SEE ALSO
+
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+.B Adrian Vides <2296@holbertonschool.com>
+.B Roberth Rondon <2474@holbertonschool.com>
