@@ -5,11 +5,11 @@
  * @val_issaty: value of issaty function
  * Return: the read line
  */
-char *_getline(size_t val_issaty)
+char *_getline(size_t val_issaty, char __attribute__((unused)) **myenvp)
 {
 	size_t bufsize = 0;
-	int getln = 0;
-	char *line = NULL;
+	int getln = 0, aux = 0;
+	char *line = NULL, *tmp = malloc(sizeof(char) * 1280);
 
 	if (val_issaty == 1)
 	{
@@ -25,6 +25,16 @@ char *_getline(size_t val_issaty)
 		_putchar(10);
 		exit(EXIT_SUCCESS);
 	}
+	if (_strcmp(line, "env\n") == 0)
+	{
+		for (aux = 0; myenvp[aux] != NULL; aux++)
+		{
+			tmp = _strcpy(tmp, myenvp[aux]);
+			write(STDOUT_FILENO, tmp, (_strlen(tmp) + 1));
+			_putchar(10);
+		}
+	}
+
 	return (line);
 }
 
@@ -90,7 +100,6 @@ void _execve(char *path, char *command, char **flags)
 	if (tmp == NULL)
 		errors(126);
 	tmp = _strcpy(tmp, path);
-
 	token = strtok(tmp, delim);
 	while (token != NULL)
 	{
@@ -98,7 +107,6 @@ void _execve(char *path, char *command, char **flags)
 		token = strtok(NULL, delim);
 		i++;
 	}
-
 	tmp2 = malloc(sizeof(char) * 64);
 	if (tmp2 == NULL)
 		errors(126);

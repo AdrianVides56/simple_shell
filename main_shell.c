@@ -18,7 +18,7 @@ int main(int __attribute__((unused)) argc, char __attribute__((unused)) **argv,
 	while (1)
 	{
 		i = isatty(STDOUT_FILENO);
-		line = _getline(i);
+		line = _getline(i, envp);
 		if (_strcmp(line, "exit\n") == 0)
 			break;
 		token = strtok(line, DELIM);
