@@ -18,9 +18,12 @@ Operands don't shall be supported by k_shell
 Input files not supported
 
 .SH SEE ALSO
+acces(2), chdir(2), close (2), closedir(2), execve(2), exit(3), _exit(2), fflush(3), fork(2), free(3), getcwd(3), getline(3) 
+isatty(3), kill(2), malloc(3), open(2), opendir(3), perror(3), read(2), readdir(3), signal(2), stat(2), lstat(2), fstat(2) 
+strtok(3), wait(2), waitpid(2), wait3(2), wait4(2), write(2).
 
 .SH BUGS
 No known bugs.
 .SH AUTHORS
-.B Adrian Vides 
-.B Roberth Rondon 
+.B Adrian Vides and Roberth Rondon
+
