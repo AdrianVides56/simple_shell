@@ -7,6 +7,7 @@
 void errors(int errornum)
 {
 	char *errormsg = "Error\n", *notfound = "Command not found\n";
+
 	char __attribute__((unused)) *newline = "\n";
 
 	if (errornum == -1)
@@ -19,6 +20,7 @@ void errors(int errornum)
 
 	else if (errornum == 127)
 		write(STDOUT_FILENO, notfound, _strlen(notfound));
+
 	else if (errornum == 126)
 		write(STDOUT_FILENO, "Failed Malloc", _strlen("Failed malloc"));
 }
