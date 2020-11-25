@@ -42,7 +42,10 @@ int main(int __attribute__((unused)) argc, char __attribute__((unused)) **argv,
 		else
 			 wait(NULL);
 		for (i = 0; token2[i] != NULL; i++)
+		{
+			token2[i] = NULL;
 			free(token2[i]);
+		}
 		free(token2);
 	}
 		free(line);
