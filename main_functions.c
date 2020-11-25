@@ -11,11 +11,19 @@ char *_getline(size_t val_issaty)
 	int getln = 0;
 	char *line = NULL;
 
+<<<<<<< HEAD
 	if (val_issaty == 1)
 	{
 		write(STDOUT_FILENO, "\033[1;32mRASH@SHELL$", 19);
 		write(STDOUT_FILENO, "\033[0m]", 4);
 	}
+=======
+        if (val_issaty == 1)
+        {
+                write(STDOUT_FILENO, "\033[1;32mRASH@SHELL$ ", 19);
+                write(STDOUT_FILENO, "\033[0m]", 4);
+        }
+>>>>>>> 685e3843baf83085ec11efa91ec9567177e3c395
 
 	getln = getline(&line, &bufsize, stdin);
 
