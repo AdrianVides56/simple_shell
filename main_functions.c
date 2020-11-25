@@ -21,6 +21,7 @@ char *_getline(size_t val_issaty)
 
 	if (getln == EOF)
 	{
+		free(line);
 		_putchar(10);
 		exit(EXIT_SUCCESS);
 	}

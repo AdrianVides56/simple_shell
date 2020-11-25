@@ -20,7 +20,7 @@ int main(int __attribute__((unused)) argc, char __attribute__((unused)) **argv,
 		i = isatty(STDOUT_FILENO);
 		line = _getline(i);
 		if (strcmp(line, "exit\n") == 0)
-			errors(0);
+			break;
 		token = strtok(line, DELIM);
 		token2  = malloc(sizeof(char *) * _strlen(line));
 		if (token2 == NULL)
@@ -40,14 +40,11 @@ int main(int __attribute__((unused)) argc, char __attribute__((unused)) **argv,
 				_execve(path, token2[0], token2);
 		}
 		else
-			 wait(NULL);
+			wait(NULL);
 		for (i = 0; token2[i] != NULL; i++)
-		{
 			token2[i] = NULL;
-			free(token2[i]);
-		}
 		free(token2);
 	}
-		free(line);
+	free(line);
 	return (0);
 }
