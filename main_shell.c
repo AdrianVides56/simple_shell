@@ -19,7 +19,7 @@ int main(int __attribute__((unused)) argc, char __attribute__((unused)) **argv,
 	{
 		i = isatty(STDOUT_FILENO);
 		line = _getline(i);
-		if (strcmp(line, "exit\n") == 0)
+		if (_strcmp(line, "exit\n") == 0)
 			break;
 		token = strtok(line, DELIM);
 		token2  = malloc(sizeof(char *) * _strlen(line));
