@@ -17,7 +17,7 @@ char **_strtok(char *line);
 size_t _strlen(char *str);
 void errors(int errornum);
 int _putchar(char c);
-char *_getline(size_t val_issaty);
+char *_getline(size_t val_issaty, char __attribute__((unused)) **myenvp);
 void _execve(char *path, char *command, char **flags);
 char *_getenv(char **myEnvp, char *path);
 char *_strstr(char *haystack, char *needle);
