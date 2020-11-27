@@ -124,10 +124,7 @@ void _execve(char *path, char *command, char **flags)
 		_strcat(tmp2, command);
 		check = execve(tmp2, flags, NULL);
 		if (check == -1)
-		{
-			free(tmp2);
 			continue;
-		}
 	}
 	free(tmp2);
 	if (check == -1)
