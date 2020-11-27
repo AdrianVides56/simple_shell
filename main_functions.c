@@ -5,7 +5,7 @@
  * @val_issaty: value of issaty function
  * Return: the read line
  */
-char *_getline(size_t val_issaty, char __attribute__((unused)) **myenvp)
+char *_getline(size_t val_issaty, char **myenvp)
 {
 	size_t bufsize = 0;
 	int getln = 0, aux = 0;
