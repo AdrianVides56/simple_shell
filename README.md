@@ -11,6 +11,28 @@ This Shell was created on ubuntu 14.04 and compiled with gcc 4.8.4
   $ ./rash
   ```
 ---
+### Flowchart:
+![Flow_Chart](https://lucid.app/publicSegments/view/fc026936-dc50-4bf8-b320-afba711b3867/image.png)
+---
+### Usage
+You can use it two ways:
+#### Interactive mode:
+```
+  Your@Terminal$ ./rash
+  RASH@SHELL$ ls
+  RASH@SHELL$
+  AUTHORS  README.md  errors.c  functions.c  main_functions.c  main_shell.c  man_1_simple_shell  rash  shell.h
+  RASH@SHELL$ exit
+  Your@Terminal$ 
+  ```
+#### Non interactive mode:
+```
+  Your@Terminal$ echo "/bin/ls" | ./rash
+  RASH@SHELL$ AUTHORS  README.md  errors.c  functions.c  main_functions.c  main_shell.c  man_1_simple_shell  rash  shell.h
+  RASH@SHELL$
+  Your@Terminal$
+```  
+---
 ### Files
 - [README.md] :
     - Readme file for simple_shell project.
