@@ -113,6 +113,7 @@ void _execve(char *path, char *command, char **flags)
 		token = strtok(NULL, delim);
 		i++;
 	}
+	free(tmp);
 
 	for (i = 0; token2[i] != NULL; i++)
 	{
@@ -128,8 +129,7 @@ void _execve(char *path, char *command, char **flags)
 			continue;
 		}
 	}
+	free(tmp2);
 	if (check == -1)
 		errors(127);
-	free(tmp2);
-	free(tmp);
 }
