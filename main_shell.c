@@ -19,12 +19,13 @@ int main(int __attribute__((unused)) argc, char __attribute__((unused)) **argv,
 	{
 		i = isatty(STDOUT_FILENO);
 		line = _getline(i, envp);
-		if (_strcmp(line, "exit\n") == 0)
-			break;
 		token = strtok(line, DELIM);
 		token2  = malloc(sizeof(char *) * _strlen(line));
 		if (token2 == NULL)
+		{
+			free(token2);
 			errors(126);
+		}
 		for (i = 0; token != NULL; i++)
 		{
 			token2[i] = token;
@@ -45,6 +46,5 @@ int main(int __attribute__((unused)) argc, char __attribute__((unused)) **argv,
 			token2[i] = NULL;
 		free(token2);
 	}
-	free(line);
 	return (0);
 }
