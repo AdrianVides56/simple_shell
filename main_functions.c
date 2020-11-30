@@ -27,7 +27,7 @@ char *_getline(size_t val_issaty, char **myenvp)
 	if (_strcmp(line, "exit\n") == 0)
 	{
 		free(line);
-		exit(2);
+		exit(EXIT_FAILURE);
 	}
 	if (_strcmp(line, "env\n") == 0)
 	{
