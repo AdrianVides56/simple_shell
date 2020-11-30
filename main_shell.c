@@ -16,7 +16,6 @@ int main(int __attribute__((unused)) argc, char __attribute__((unused)) **argv,
 	pid_t child_pid;
 
 	while (1)
-		
 	{
 		i = isatty(STDOUT_FILENO);
 		line = _getline(i, envp);
