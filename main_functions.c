@@ -33,7 +33,7 @@ char *_getline(size_t val_issaty, char **myenvp)
 	{
 		for (aux = 0; myenvp[aux] != NULL; aux++)
 		{
-			tmp = malloc(_strlen(myenvp[aux]) + 1);
+			tmp = malloc(_strlen(myenvp[aux]));
 			tmp = _strcpy(tmp, myenvp[aux]);
 			write(STDOUT_FILENO, tmp, (_strlen(tmp)));
 			_putchar(10);
@@ -99,7 +99,7 @@ char *_strstr(char *haystack, char *needle)
 void _execve(char *path, char *command, char **flags)
 {
 	char *token, *token2[1024];
-	char *tmp = malloc(_strlen(path) + 1), *tmp2;
+	char *tmp = malloc(_strlen(path)), *tmp2;
 	const char delim[2] = ":";
 	int i = 0, check = 0;
 
@@ -117,7 +117,7 @@ void _execve(char *path, char *command, char **flags)
 
 	for (i = 0; token2[i] != NULL; i++)
 	{
-		tmp2 = malloc(_strlen(token2[i]) + 1);
+		tmp2 = malloc(_strlen(token2[i]));
 		check = 0;
 		tmp2 = _strcpy(tmp2, token2[i]);
 		_strcat(tmp2, "/");
